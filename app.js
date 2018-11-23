@@ -19,6 +19,7 @@ var commentRoutes       = require('./routes/comments'),
 var Database = process.env.DATABASEURL;
 
 console.log(Database);
+console.log(Database);
 //connect to mongod locally
 mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
 
