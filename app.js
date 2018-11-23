@@ -16,9 +16,9 @@ var commentRoutes       = require('./routes/comments'),
     indexRoutes          = require('./routes/index');
 
 // seedDB(); // Seeds the database
-console.log(process.env.DATABASEURL);
+
 //connect to mongod locally
-mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
 // connect to mlab to use mongodb
 //Link heroku is connected to
