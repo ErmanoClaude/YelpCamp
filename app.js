@@ -17,12 +17,12 @@ var commentRoutes       = require('./routes/comments'),
 
 // seedDB(); // Seeds the database
 
-
+console.log(process.env.DATABASEURL);
 //connect to mongod locally
-// mongoose.connect('mongodb://localhost/yelp_campv2', { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 
 // connect to mlab to use mongodb
-mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
+// mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
