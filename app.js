@@ -16,7 +16,6 @@ var commentRoutes       = require('./routes/comments'),
     indexRoutes          = require('./routes/index');
 
 // seedDB(); // Seeds the database
-process.env.DATABASEURL;
 //connect to mongod locally
 //mongoose.connect( process.env.DATABASEURL, { useNewUrlParser: true });
 
