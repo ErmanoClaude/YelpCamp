@@ -16,16 +16,13 @@ var commentRoutes       = require('./routes/comments'),
     indexRoutes          = require('./routes/index');
 
 // seedDB(); // Seeds the database
-var Database = process.env.DATABASEURL;
-
-console.log(Database);
-console.log(Database);
+process.env.DATABASEURL;
 //connect to mongod locally
-mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
+//mongoose.connect( process.env.DATABASEURL, { useNewUrlParser: true });
 
 // connect to mlab to use mongodb
 //Link heroku is connected to
-// mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
+mongoose.connect('mongodb://ermano:claude1@ds115154.mlab.com:15154/yelpcamp', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
